@@ -22,7 +22,7 @@
         android:id="@+id/alturaInput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Altura (m)"
+        android:hint="Altura (cm)"
         android:inputType="numberDecimal"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"

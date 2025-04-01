@@ -23,9 +23,8 @@ class MainActivity : AppCompatActivity() {
 
         // Evento do clique no botão "Calcular IMC"
         calcularButton.setOnClickListener {
-            val altura = alturaInput.text.toString().toDoubleOrNull()
-            val peso = pesoInput.text.toString().toDoubleOrNull()
-
+            val altura = alturaInput?.text.toString().toFloatOrNull()?.div(100)
+            val peso = pesoInput?.text.toString().toIntOrNull()
             if (altura != null && peso != null) {
                 // Cálculo do IMC
                 val imc = peso / (altura * altura)
