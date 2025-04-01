@@ -1,23 +1,25 @@
-package com.example.calculadoraimc
+package com.example.my_imc
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
         // Referências aos componentes do layout
-        val alturaInput: EditText = findViewById(R.id.alturaInput)
-        val pesoInput: EditText = findViewById(R.id.pesoInput)
-        val calcularButton: Button = findViewById(R.id.calcularButton)
-        val resultadoText: TextView = findViewById(R.id.resultadoText)
+        val alturaInput: EditText = findViewById<EditText>(R.id.alturaInput)
+        val pesoInput: EditText = findViewById<EditText>(R.id.pesoInput)
+        val calcularButton: Button = findViewById<Button>(R.id.calcularButton)
+        val resultadoText: TextView = findViewById<TextView>(R.id.resultadoText)
 
         // Evento do clique no botão "Calcular IMC"
         calcularButton.setOnClickListener {
