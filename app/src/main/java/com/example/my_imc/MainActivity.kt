@@ -28,8 +28,11 @@ class MainActivity : AppCompatActivity() {
             if (altura != null && peso != null) {
                 // Cálculo do IMC
                 val imc = peso / (altura * altura)
+
                 resultadoText.text = "Seu IMC é: %.2f".format(imc)
-            } else {
+            }
+
+            else {
                 // Exibe mensagem de erro se os valores não forem válidos
                 Toast.makeText(this, "Por favor, insira valores válidos", Toast.LENGTH_SHORT).show()
             }
